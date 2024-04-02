@@ -1,0 +1,49 @@
+<section class="hero">
+  <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="" />
+  <div class="hero-footer"></div>
+</section>
+
+<h1 style="width: 100%; padding: 68px; font-size: 45px; text-align: center">
+  Tech Stack
+</h1>
+
+<section class="content">
+  @for (stack of tech_stack; track $index) {
+  <div class="card">
+    <img [src]="stack.image" alt="Imagem do card" />
+    <div class="card-content">
+      <!-- <p>{{ stack.name }}</p> -->
+      <!-- <span class="material-symbols-outlined"> arrow_right_alt </span> -->
+    </div>
+  </div>
+  }
+</section>
+
+<h1 style="width: 100%; padding: 68px; font-size: 45px; text-align: center">
+  Projetos
+</h1>
+
+<section class="projects-section">
+  <div class="projects">
+    @for (project of projects; track $index) {
+    <div class="project-card">
+      <img [src]="project.image" alt="Imagem do card" />
+      <span class="car-name">{{ project.name }}</span>
+
+      <div class="project-card-footer">
+        <span>
+          {{ project.description }}
+        </span>
+        <div class="project-card-buttons">
+          <a [href]="project.github">
+            <button>Github</button>
+          </a>
+          <a [href]="project.live">
+            <button>Live</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
