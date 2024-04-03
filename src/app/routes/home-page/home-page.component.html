@@ -1,23 +1,6 @@
 <app-header></app-header>
 
-<h1
-  style="width: 100%; padding: 68px; font-size: 45px; text-align: center"
-  id="stack"
->
-  Tech Stack
-</h1>
-
-<section class="content">
-  @for (stack of tech_stack; track $index) {
-  <div class="card">
-    <img [src]="stack.image" alt="Imagem do card" />
-    <div class="card-content">
-      <!-- <p>{{ stack.name }}</p> -->
-      <!-- <span class="material-symbols-outlined"> arrow_right_alt </span> -->
-    </div>
-  </div>
-  }
-</section>
+<app-tech-stack></app-tech-stack>
 
 <h1
   style="width: 100%; padding: 68px; font-size: 45px; text-align: center"

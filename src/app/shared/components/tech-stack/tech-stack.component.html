@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 id="stack">Tech Stack</h1>
+
+  <section class="content">
+    @for (stack of tech_stack; track $index) {
+    <div class="card">
+      <img [src]="stack.image" alt="Imagem do card" />
+      <div class="card-content">
+        <!-- <p>{{ stack.name }}</p> -->
+        <!-- <span class="material-symbols-outlined"> arrow_right_alt </span> -->
+      </div>
+    </div>
+    }
+  </section>
+</div>
