@@ -24,30 +24,31 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 20px;
-  margin-bottom: 50px;
+  gap: 30px;
+  margin: 0 60px 50px 60px;
 
   @media (max-width: 1250px) {
     grid-template-columns: 1fr;
+    margin: 0 30px 50px 30px;
   }
 }
 
 .project-card {
   position: relative;
-  border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;
-  margin: 0 30px;
+  height: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-name {
   position: absolute;
   top: 30px;
   left: 30px;
-  color: black;
-  background: rgba(0, 123, 255, 0.4);
+  color: white;
+  background: rgba(0, 123, 255, 0.6);
   padding: 0 20px;
-  font-size: 35px;
+  font-size: 16px;
   font-family: "Courgette", cursive;
   font-weight: 400;
   font-style: normal;
@@ -97,7 +98,7 @@
 }
 
 .project-card-footer span {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: black;
   text-align: center;
@@ -122,9 +123,10 @@
 }
 
 .project-card-buttons a button {
-  padding: 13px 26px;
-  border: 1px solid #fff;
-  border-radius: 5px;
+  padding: 5px 15px;
+  background: #007bff;
+  border-radius: 10px;
+  border: none;
   width: 100%;
   font-size: 16px;
   transition: all 0.2s;
@@ -168,7 +170,7 @@
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all 0.5s;
+  transition: all 0.75s;
 }
 
 .show {
