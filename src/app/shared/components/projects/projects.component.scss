@@ -113,3 +113,27 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion: reduce) {
+
+  .project-card .project-img,
+  .project-card:hover .project-img,
+  .hidden {
+    transition: none;
+  }
+}

@@ -5,7 +5,7 @@
     @for (stack of tech_stack; track $index) {
     <ng-container>
       <swiper-slide class="card">
-        <img [src]="stack.image" alt="Imagem do card" />
+        <img [src]="stack.image" alt="Imagem do card" loading="lazy" />
       </swiper-slide>
     </ng-container>
     }

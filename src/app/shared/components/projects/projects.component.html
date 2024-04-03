@@ -9,23 +9,23 @@
   <section class="projects-section">
     <div class="projects">
       @for (project of projects; track $index) {
-      <div class="project-card">
-        <img [src]="project.image" alt="Imagem do card" class="project-img" />
-        <span class="project-name">{{ project.name }}</span>
+      <div class="project-card hidden">
         <img
-          class="project-stack"
-          [src]="project.stack"
+          [src]="project.image"
+          alt="Imagem do card"
+          class="project-img"
+          loading="lazy"
         />
+        <span class="project-name">{{ project.name }}</span>
+        <img class="project-stack" [src]="project.stack" loading="lazy" />
 
         <div class="project-card-footer">
-          <!-- <span>
-            {{ project.description }}
-          </span> -->
           <div class="project-card-buttons">
             <a [href]="project.github" target="_blank">
               <button>
                 <img
                   class="github-icon"
+                  loading="lazy"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
                 />
                 Github
@@ -35,8 +35,8 @@
               <button>
                 <img
                   class="live-icon"
+                  loading="lazy"
                   src="https://icongr.am/clarity/paperclip.svg?size=25&color=currentColor"
-                  alt=""
                 />
 
                 Live

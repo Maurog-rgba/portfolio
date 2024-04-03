@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   projects = [
     {
       name: 'Color Flipper',
@@ -47,4 +47,25 @@ export class ProjectsComponent {
         'https://icongr.am/devicon/html5-original.svg?size=148&color=currentColor',
     },
   ];
+
+  ngOnInit(): void {
+    this.animateOnScroll();
+  }
+
+  animateOnScroll() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
 }
