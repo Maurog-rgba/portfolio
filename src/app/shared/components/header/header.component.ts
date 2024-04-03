@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SmoothScrollService } from '../../services/smooth-scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   currentText = '';
   index = 0;
 
-  constructor() {}
+  constructor(private smoothScrollService: SmoothScrollService) {}
 
   ngOnInit(): void {
     this.typeText();
@@ -26,5 +27,9 @@ export class HeaderComponent implements OnInit {
         this.typeText();
       }, 100);
     }
+  }
+
+  scrollToSection(sectionId: string): void {
+    this.smoothScrollService.scrollTo(sectionId);
   }
 }
