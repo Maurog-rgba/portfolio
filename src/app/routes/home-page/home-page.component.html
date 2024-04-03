@@ -2,34 +2,4 @@
 
 <app-tech-stack></app-tech-stack>
 
-<h1
-  style="width: 100%; padding: 68px; font-size: 45px; text-align: center"
-  id="projects"
->
-  Projetos
-</h1>
-
-<section class="projects-section">
-  <div class="projects">
-    @for (project of projects; track $index) {
-    <div class="project-card">
-      <img [src]="project.image" alt="Imagem do card" />
-      <span class="car-name">{{ project.name }}</span>
-
-      <div class="project-card-footer">
-        <span>
-          {{ project.description }}
-        </span>
-        <div class="project-card-buttons">
-          <a [href]="project.github">
-            <button>Github</button>
-          </a>
-          <a [href]="project.live">
-            <button>Live</button>
-          </a>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
-</section>
+<app-projects></app-projects>

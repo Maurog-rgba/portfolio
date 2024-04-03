@@ -1,0 +1,52 @@
+<div class="container">
+  <h1
+    style="width: 100%; padding: 68px; font-size: 45px; text-align: center"
+    id="projects"
+  >
+    Projects
+  </h1>
+
+  <section class="projects-section">
+    <div class="projects">
+      @for (project of projects; track $index) {
+      <div class="project-card">
+        <img [src]="project.image" alt="Imagem do card" class="project-img" />
+        <span class="car-name">{{ project.name }}</span>
+
+        <!-- TODO: Implement project stack -->
+        <!-- <div class="project-stack">
+
+        </div> -->
+
+        <div class="project-card-footer">
+          <span>
+            {{ project.description }}
+          </span>
+          <div class="project-card-buttons">
+            <a [href]="project.github" target="_blank">
+              <button>
+                <img
+                  class="github-icon"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                />
+                Github
+              </button>
+            </a>
+            <a [href]="project.live" target="_blank">
+              <button>
+                <img
+                  class="live-icon"
+                  src="https://icongr.am/clarity/paperclip.svg?size=25&color=currentColor"
+                  alt=""
+                />
+
+                Live
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+</div>
