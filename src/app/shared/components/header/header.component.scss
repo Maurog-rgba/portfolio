@@ -71,14 +71,8 @@ nav ul li a:hover::after {
   margin: 0 auto;
 }
 
-.hero p,
-.hero h1 {
+.hero p {
   margin: 0 0 10px 0;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
 }
 
 .hero button {
@@ -92,5 +86,26 @@ nav ul li a:hover::after {
 
   &:hover {
     background-color: #0056b3;
+  }
+}
+
+// Typing animation
+.typing-effect {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#cursor {
+  border-left: 2px solid black;
+  animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
