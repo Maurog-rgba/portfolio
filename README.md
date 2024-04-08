@@ -1,27 +1,41 @@
-# Portfolio
+# My Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Welcome to my portfolio project under development! This is a space where I share information about myself, my projects, and skills. This README provides an overview of the project and instructions for setting up and running it locally.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This portfolio project is being developed using the following technologies:
 
-## Code scaffolding
+- Angular: Frontend framework for building dynamic and responsive user interfaces.
+- TypeScript: A programming language that adds optional static types to JavaScript.
+- SCSS: An extension of CSS that provides features like variables, mixins, and nesting.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+To run this project locally, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the repository:**
 
-## Running unit tests
+   ```
+   git clone https://github.com/your-username/your-project.git
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Install dependencies:**
 
-## Running end-to-end tests
+   Navigate to the project directory and run:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```
+   npm install
+   ```
 
-## Further help
+3. **Run the development server:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   After installing dependencies, run the following command to start the development server:
+
+   ```
+   ng serve
+   ```
+
+4. **View the project:**
+
+   Open your browser and navigate to `http://localhost:4200/` to see the project in action.
