@@ -22,4 +22,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_M_AURO_PORTFOLIO }}
           channelId: live
-          projectId: clinica-de-olhos-da19d
+          projectId: m-auro-portfolio
