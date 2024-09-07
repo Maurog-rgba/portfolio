@@ -13,9 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm run build
+      - name: install angular-cli
+        run: npm install -g @angular/cli
+      - name: install dependencies
+        run: npm install
+      - name: build project
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_M_AURO_PORTFOLIO }}
-          projectId: m-auro-portfolio
+          projectId: clinica-de-olhos-da19d
