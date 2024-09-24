@@ -1,24 +1,49 @@
-<header>
-  <nav>
-    <ul>
-      <li>
-        <a (click)="scrollToSection('home')">Home</a>
+<header class="p-5 shadow-sm text-indigo-950 border-none box-border">
+  <nav
+    class="flex justify-between items-center border-b border-indigo-950 py-4"
+  >
+    <div class="px-7">
+      <a href="/">Mauro</a>
+    </div>
+
+    <ul class="list-none flex justify-center items-center gap-5 p-0 m-0">
+      <li class="mr-5">
+        <a
+          (click)="scrollToSection('home')"
+          class="text-lg font-bold transition-colors ease-linear relative hover:text-indigo-500 cursor-pointer"
+          >Home</a
+        >
       </li>
-      <li>
-        <a (click)="scrollToSection('stack')">Tech Stack</a>
+      <li class="mr-5">
+        <a
+          (click)="scrollToSection('stack')"
+          class="text-lg font-bold transition-colors ease-linear relative hover:text-indigo-500 cursor-pointer"
+          >Tech Stack</a
+        >
       </li>
-      <li>
-        <a (click)="scrollToSection('projects')">Projects</a>
+      <li class="mr-5">
+        <a
+          (click)="scrollToSection('projects')"
+          class="text-lg font-bold transition-colors ease-linear relative hover:text-indigo-500 cursor-pointer"
+          >Projects</a
+        >
       </li>
-      <li>
-        <a (click)="scrollToSection('about')">About</a>
+      <li class="mr-5">
+        <a
+          (click)="scrollToSection('about')"
+          class="text-lg font-bold transition-colors ease-linear relative hover:text-indigo-500 cursor-pointer"
+          >About</a
+        >
       </li>
     </ul>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <p>Hi, I'm Mauro</p>
+  <section
+    id="home"
+    class="flex justify-center items-center h-screen text-center p-5 box-border"
+  >
+    <div class="max-w-3xl mx-0 my-auto">
+      <p class="m-x mb-2">Hi, I'm Mauro</p>
       <div class="typing-effect">
         <span id="text">{{ currentText }}</span
         ><span id="cursor"></span>
@@ -31,7 +56,11 @@
       <a
         href="https://www.linkedin.com/in/mauro-gabriel-b602b5194"
         target="_blank"
-        ><button>Get in touch</button></a
+        ><button
+          class="bg-indigo-950 text-slate-200 hover:bg-indigo-700 transition-all border-none rounded-full mt-3 p-3"
+        >
+          Get in touch
+        </button></a
       >
     </div>
   </section>
